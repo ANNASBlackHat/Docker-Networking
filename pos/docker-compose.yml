@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  pos:
+    build: .
+    ports:
+      - "5001:5000"
+
+networks:
+  default:
+    external:
+      name: uniq_network
+
+# docker network create uniq_network
